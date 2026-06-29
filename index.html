@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MOTIV AUTOMOTIVE — 次世代のモビリティ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="image-slot.js"></script>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <image-slot id="hero-bg" shape="rect" placeholder="ヒーロー画像（都市を走るSUV）" class="fill-abs"></image-slot>
+  <div class="hero-overlay"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <div class="logo-mark">M</div>
+      <div class="logo-text">
+        <div class="logo-name">MOTIV.</div>
+        <div class="logo-sub">AUTOMOTIVE</div>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <span class="nav-link" onclick="document.getElementById('lineup').scrollIntoView({behavior:'smooth'})">車種</span>
+      <span class="nav-link" onclick="document.getElementById('plan').scrollIntoView({behavior:'smooth'})">料金プラン</span>
+      <span class="nav-link" onclick="document.getElementById('strengths').scrollIntoView({behavior:'smooth'})">私たちの強み</span>
+      <span class="nav-link" onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})">よくある質問</span>
+      <span class="nav-link" onclick="document.getElementById('flow')?.scrollIntoView({behavior:'smooth'})">導入の流れ</span>
+    </nav>
+    <div class="header-contact">
+      <span class="ms header-contact-icon">mail</span>
+      <div class="header-contact-text">
+        <div class="header-contact-title">お問い合わせ</div>
+        <div class="header-contact-sub">資料請求はこちら</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero content -->
+  <div class="hero-content">
+    <h1 class="hero-title">走り出す、<br>その先の未来へ。</h1>
+    <p class="hero-lead">ビジネスの加速を支える、<br>次世代のモビリティを。</p>
+    <button class="hero-btn">
+      <span>今すぐ無料で相談する</span>
+      <span class="ms">arrow_forward</span>
+    </button>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <span class="scroll-indicator-text">SCROLL</span>
+    <div class="scroll-indicator-line"></div>
+  </div>
+</section>
+
+<!-- ============ LINE UP ============ -->
+<section id="lineup" class="lineup">
+  <div class="lineup-watermark">LINE UP</div>
+  <div class="lineup-inner">
+    <div class="lineup-lead">
+      <div class="section-eyebrow">LINE UP</div>
+      <h2 class="section-heading">多彩なラインアップで、<br>ビジネスに最適な一台を。</h2>
+      <p class="section-body">用途やニーズに合わせて選べる、<br>豊富なラインアップをご用意しています。</p>
+      <div class="lineup-link">
+        <span class="lineup-link-text">すべての車種を見る</span>
+        <span class="lineup-link-rule"></span>
+        <span class="ms lineup-link-arrow">arrow_forward</span>
+      </div>
+    </div>
+    <div class="car-grid">
+      <div class="car-card">
+        <image-slot id="car-suv" shape="rect" placeholder="SUV" class="fill-abs"></image-slot>
+        <div class="car-card-label">
+          <div class="car-card-name">SUV</div>
+          <div class="car-card-desc">力強さと快適性を<br>兼ね備えた一台</div>
+        </div>
+      </div>
+      <div class="car-card">
+        <image-slot id="car-sedan" shape="rect" placeholder="SEDAN" class="fill-abs"></image-slot>
+        <div class="car-card-label">
+          <div class="car-card-name">SEDAN</div>
+          <div class="car-card-desc">洗練されたデザインと<br>上質な乗り心地</div>
+        </div>
+      </div>
+      <div class="car-card">
+        <image-slot id="car-compact" shape="rect" placeholder="COMPACT" class="fill-abs"></image-slot>
+        <div class="car-card-label">
+          <div class="car-card-name">COMPACT</div>
+          <div class="car-card-desc">街中で最適な<br>取り回しの良さ</div>
+        </div>
+      </div>
+      <div class="car-card">
+        <image-slot id="car-ev" shape="rect" placeholder="EV" class="fill-abs"></image-slot>
+        <div class="car-card-label">
+          <div class="car-card-name">EV</div>
+          <div class="car-card-desc">環境性能に優れた<br>次世代の選択肢</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLAN ============ -->
+<section id="plan" class="plan">
+  <div class="plan-inner">
+    <div class="plan-lead">
+      <div class="section-eyebrow">PLAN</div>
+      <h2 class="section-heading">選べる料金プランで、<br>無理なく導入。</h2>
+      <p class="section-body">ビジネスの規模や用途に合わせて、<br>最適なプランをお選びいただけます。</p>
+    </div>
+
+    <div class="plan-cards">
+
+      <!-- BASIC -->
+      <div class="plan-card">
+        <div class="plan-card-header">
+          <div class="plan-name">BASIC PLAN</div>
+          <div class="plan-name-ja">ベーシックプラン</div>
+          <div class="plan-price-label">月額（税別）</div>
+          <div class="plan-price">¥25,000<span class="plan-price-unit">〜</span></div>
+          <p class="plan-desc">コストを抑えた<br>導入しやすいエントリープラン</p>
+        </div>
+        <div class="plan-features">
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>車検・メンテナンス込み</div>
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>自動車税・重量税込み</div>
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>24時間サポート</div>
+        </div>
+        <button class="plan-btn-ghost">
+          <span>詳しく見る</span><span class="ms">arrow_forward</span>
+        </button>
+      </div>
+
+      <!-- STANDARD (featured) -->
+      <div class="plan-card plan-card--featured">
+        <div class="plan-badge">おすすめ</div>
+        <div class="plan-card-header">
+          <div class="plan-name">STANDARD PLAN</div>
+          <div class="plan-name-ja">スタンダードプラン</div>
+          <div class="plan-price-label">月額（税別）</div>
+          <div class="plan-price">¥35,000<span class="plan-price-unit">〜</span></div>
+          <p class="plan-desc">バランスの良い充実設備で<br>幅広いビジネスに対応</p>
+        </div>
+        <div class="plan-features">
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>車検・メンテナンス込み</div>
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>自動車税・重量税込み</div>
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>24時間サポート</div>
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>代車無料サービス</div>
+        </div>
+        <button class="plan-btn-gold">
+          <span>詳しく見る</span><span class="ms">arrow_forward</span>
+        </button>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="plan-card">
+        <div class="plan-card-header">
+          <div class="plan-name">PREMIUM PLAN</div>
+          <div class="plan-name-ja">プレミアムプラン</div>
+          <div class="plan-price-label">月額（税別）</div>
+          <div class="plan-price">¥50,000<span class="plan-price-unit">〜</span></div>
+          <p class="plan-desc">ワンランク上の快適さと安心を<br>求める企業様へ</p>
+        </div>
+        <div class="plan-features">
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>車検・メンテナンス込み</div>
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>自動車税・重量税込み</div>
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>24時間サポート</div>
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>代車無料サービス</div>
+          <div class="plan-feature-item"><span class="ms plan-check-icon">check</span>専任担当サポート</div>
+        </div>
+        <button class="plan-btn-ghost">
+          <span>詳しく見る</span><span class="ms">arrow_forward</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ STRENGTHS ============ -->
+<section id="strengths" class="strengths">
+  <div class="strengths-inner">
+    <div class="strengths-lead">
+      <div class="section-eyebrow">STRENGTHS</div>
+      <h2 class="section-heading">選ばれる理由が、<br>ここにあります。</h2>
+    </div>
+    <div class="strengths-grid">
+      <div class="strength-item">
+        <span class="ms strength-icon">verified_user</span>
+        <div class="strength-title">高い品質と信頼性</div>
+        <p class="strength-desc">厳しい基準をクリアした車両のみをご提供します。</p>
+      </div>
+      <div class="strength-item">
+        <span class="ms strength-icon">health_and_safety</span>
+        <div class="strength-title">安全性能へのこだわり</div>
+        <p class="strength-desc">最新の安全技術を搭載し、万が一にも備えます。</p>
+      </div>
+      <div class="strength-item">
+        <span class="ms strength-icon">local_gas_station</span>
+        <div class="strength-title">優れた燃費性能</div>
+        <p class="strength-desc">燃費効率を追求し、ランニングコストを削減。</p>
+      </div>
+      <div class="strength-item">
+        <span class="ms strength-icon">headset_mic</span>
+        <div class="strength-title">法人専用サポート</div>
+        <p class="strength-desc">専任担当が導入から運用までしっかりサポート。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="faq">
+  <div class="faq-inner">
+    <div class="faq-title-row">
+      <h2 class="faq-title">FAQ</h2>
+      <span class="faq-subtitle">よくある質問</span>
+    </div>
+    <div class="faq-grid">
+
+      <!-- Left column -->
+      <div class="faq-col">
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <span class="faq-q">Q. 契約期間はどのくらいですか？</span>
+            <span class="faq-chevron"></span>
+          </div>
+          <div class="faq-body">ご契約期間は3年・5年・7年からお選びいただけます。導入後のご状況に合わせた見直しにも柔軟に対応いたします。</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <span class="faq-q">Q. メンテナンスの対応範囲は？</span>
+            <span class="faq-chevron"></span>
+          </div>
+          <div class="faq-body">車検・定期点検・消耗品の交換まで、メンテナンスはすべてプラン料金に含まれています。</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <span class="faq-q">Q. 中途解約は可能ですか？</span>
+            <span class="faq-chevron"></span>
+          </div>
+          <div class="faq-body">中途解約も可能です。残期間に応じた精算となりますので、まずは担当者へご相談ください。</div>
+        </div>
+
+      </div>
+
+      <!-- Right column -->
+      <div class="faq-col">
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <span class="faq-q">Q. 納車までの期間はどのくらいですか？</span>
+            <span class="faq-chevron"></span>
+          </div>
+          <div class="faq-body">在庫車両であれば最短2週間、受注生産の場合は1〜2ヶ月程度が目安となります。</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <span class="faq-q">Q. 走行距離の制限はありますか？</span>
+            <span class="faq-chevron"></span>
+          </div>
+          <div class="faq-body">月間1,500km〜3,000kmの範囲でお選びいただけます。超過分は別途精算となります。</div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-header">
+            <span class="faq-q">Q. 保険は含まれていますか？</span>
+            <span class="faq-chevron"></span>
+          </div>
+          <div class="faq-body">自動車保険・各種補償はプランに含まれています。法人向けの追加補償もご用意しています。</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta">
+  <image-slot id="cta-bg" shape="rect" placeholder="CTA背景画像（夕景を走る車）" class="fill-abs"></image-slot>
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <h2 class="cta-title">ビジネスの未来を、<br>ともに走らせましょう。</h2>
+    <p class="cta-lead">まずは無料でご相談ください。<br>最適なプランをご提案します。</p>
+    <button class="cta-btn">
+      <span class="cta-btn-inner"><span class="ms">mail</span>今すぐ無料で相談する</span>
+      <span class="ms">arrow_forward</span>
+    </button>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <div class="footer-logo-mark">M</div>
+      <div class="footer-logo-text">
+        <div class="footer-logo-name">MOTIV.</div>
+        <div class="footer-logo-sub">AUTOMOTIVE</div>
+      </div>
+    </div>
+    <nav class="footer-nav">
+      <span class="footer-link">車種</span>
+      <span class="footer-link">料金プラン</span>
+      <span class="footer-link">私たちの強み</span>
+      <span class="footer-link">よくある質問</span>
+      <span class="footer-link">導入の流れ</span>
+      <span class="footer-link">会社概要</span>
+    </nav>
+    <div class="footer-sns">
+      <span class="ms sns-icon">public</span>
+      <span class="sns-icon sns-x">𝕏</span>
+      <span class="ms sns-icon">photo_camera</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
