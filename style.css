@@ -291,7 +291,7 @@ body {
   margin: 18px 0 0;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1.55;
   letter-spacing: .03em;
 }
@@ -549,13 +549,15 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .plan-card {
   background: var(--navy-mid);
   padding: 38px 28px 32px;
   border: 1px solid rgba(255,255,255,.06);
+  display: flex;
+  flex-direction: column;
 }
 
 .plan-card--featured {
@@ -608,6 +610,7 @@ body {
   gap: 13px;
   border-top: 1px solid rgba(255,255,255,.08);
   padding-top: 26px;
+  flex: 1;
 }
 .plan-card--featured .plan-features { border-top-color: rgba(255,255,255,.1); }
 
@@ -774,6 +777,170 @@ body {
   font-weight: 700;
   font-size: 17px;
   font-family: var(--font-display);
+}
+
+/* ══════════════════════════════════════
+   Responsive — 768px 以下
+   ══════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Header ── */
+  .site-header {
+    padding: 20px 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .site-nav {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: var(--navy);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transform: translateX(100%);
+    transition: transform .35s var(--ease-out);
+  }
+
+  .site-nav.is-open { transform: translateX(0); }
+
+  .site-nav .nav-link { font-size: 20px; font-weight: 500; }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    z-index: 200;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: #fff;
+    transition: transform .25s var(--ease-out), opacity .2s;
+    transform-origin: center;
+  }
+
+  .hamburger.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.is-open span:nth-child(2) { opacity: 0; }
+  .hamburger.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .header-contact-sub { display: none; }
+
+  /* ── Hero ── */
+  .hero { min-height: 600px; }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(13,22,33,.85) 0%, rgba(13,22,33,.6) 100%);
+  }
+
+  .hero-content {
+    padding: 0 24px 80px;
+    max-width: 100%;
+  }
+
+  .hero-title { font-size: 38px; }
+
+  .hero-lead { font-size: 15px; }
+
+  .hero-btn { gap: 24px; }
+
+  .scroll-indicator { display: none; }
+
+  /* ── LINE UP ── */
+  .lineup { padding: 64px 24px 72px; }
+
+  .lineup-watermark { font-size: 72px; top: 28px; }
+
+  .lineup-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .lineup-lead { padding-top: 0; }
+
+  .car-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .car-card { height: 220px; }
+
+  /* ── PLAN ── */
+  .plan { padding: 64px 24px 72px; }
+
+  .plan-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .plan-lead { padding-top: 0; }
+
+  .plan-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .plan-card--featured { margin-top: 0; }
+
+  /* ── STRENGTHS ── */
+  .strengths { padding: 64px 24px; }
+
+  .strengths-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .strengths-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 0;
+  }
+
+  /* ── FAQ ── */
+  .faq { padding: 64px 24px 72px; }
+
+  .faq-title { font-size: 32px; }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 32px;
+  }
+
+  /* ── CTA ── */
+  .cta-content { padding: 48px 24px; }
+
+  .cta-title { font-size: 26px; }
+
+  .cta-btn { gap: 24px; }
+  .cta-btn:hover { gap: 32px; }
+
+  /* ── Footer ── */
+  .site-footer { padding: 32px 24px; }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .footer-nav {
+    flex-wrap: wrap;
+    gap: 14px 20px;
+  }
 }
 
 /* ── Reduced motion ── */
